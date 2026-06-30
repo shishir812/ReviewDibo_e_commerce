@@ -7,7 +7,23 @@ import type {
   ReviewUpdatePayload
 } from "@/types";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
+function normalizeApiBaseUrl(value: string): string {
+  const trimmedValue = value.trim().replace(/\/+$/, "");
+
+  if (/^https?:\/\//i.test(trimmedValue)) {
+    return trimmedValue;
+  }
+
+  if (/^(localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/i.test(trimmedValue)) {
+    return `http://${trimmedValue}`;
+  }
+
+  return `https://${trimmedValue}`;
+}
+
+const API_BASE_URL = normalizeApiBaseUrl(
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000"
+);
 
 function authHeaders(token: string): HeadersInit {
   return {

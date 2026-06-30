@@ -94,6 +94,21 @@ NEXT_PUBLIC_API_BASE_URL=http://localhost:8000
 
 Frontend runs at `http://localhost:3000`.
 
+## Deployment Notes
+
+Use these same backend variables in production. For the demo admin login, set:
+
+```env
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=admin123
+```
+
+Set the frontend API URL with the full deployed backend URL, including `https://`:
+
+```env
+NEXT_PUBLIC_API_BASE_URL=https://your-backend-domain.up.railway.app
+```
+
 ## Database Migration / Schema
 
 Alembic migrations are in:
