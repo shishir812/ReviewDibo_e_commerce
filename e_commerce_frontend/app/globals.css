@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #1f2937;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background: #bae0ff;
+}
