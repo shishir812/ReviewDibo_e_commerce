@@ -150,19 +150,3 @@ Protected endpoints use:
 Authorization: Bearer <jwt_token>
 ```
 
-## Assessment Checklist
-
-- FastAPI REST API: complete
-- PostgreSQL + SQLAlchemy ORM: complete
-- Product, User, Review models: complete
-- Product list and detail APIs: complete
-- Review create, update, delete APIs: complete
-- Next.js responsive frontend: complete
-- Product cards, detail page, review form: complete
-- Loading and error handling: complete
-- JWT authentication bonus: complete
-- Admin panel bonus: complete
-- Search and rating filter bonus: complete
-- `.env.example`: complete
-- Migration/schema: complete
-- Swagger/OpenAPI docs: complete

@@ -57,7 +57,4 @@ The API runs at `http://localhost:8000`. Swagger docs are available at `http://l
 
 Protected endpoints use `Authorization: Bearer <jwt_token>`.
 
-## Seed Data
 
-On application startup, five sample products are inserted if the products table is empty:
-Laptop, Smartphone, Headphones, Smart Watch, and Gaming Chair.
